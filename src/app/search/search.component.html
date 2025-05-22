@@ -1,0 +1,33 @@
+
+<div class="container mt-5">
+    <div class="row ">
+        <div class="col-md-3 styleslide">
+            <input type="text" placeholder="enter product name" class="form-control" [(ngModel)]="productname">
+            <button class="btn btn-success btn-sm mt-2 me-1" (click)="SearchP()">Search</button>
+            <button class="btn btn-success btn-sm mt-2" (click)="ClearP()">Clear</button>
+        </div>
+        <div class="col-md-2">
+            
+        </div>
+        @if(searched){
+              <div class="col-md-4 styleproductslides">
+            <div class="p-3 border rounded product-item text-center">
+        <img src="{{searchedProduct.image}}" alt="no" class="product-img mb-2">
+        <h6 class="fw-bold">{{searchedProduct.name}}</h6>
+        <p class="text-muted mb-1 price">Price: {{searchedProduct.price}}</p>
+            </div>
+        </div>
+        }@else if(notfound){
+            <div class="col-md-4 styleproductslide">
+                 <h6 class="text-danger">.Product not found</h6>
+            </div>
+        }@else{
+            <div class="col-md-4">
+           
+        </div>
+        }
+        <div class="col-md-3">
+            
+        </div>
+    </div>
+</div>

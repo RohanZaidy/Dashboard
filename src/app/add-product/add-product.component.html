@@ -1,0 +1,43 @@
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form #formdata >
+
+            </form>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- add-product.component.html -->
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-12">
+      <form #formdata="ngForm" (ngSubmit)="addNewProduct()">
+        <div class="mb-3">
+          <label for="name" class="form-label">Product Name</label>
+          <input type="text" id="name" class="form-control" [(ngModel)]="newProduct.name" name="name" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="price" class="form-label">Product Price</label>
+          <input type="number" id="price" class="form-control" [(ngModel)]="newProduct.price" name="price" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="image" class="form-label">Product Image</label>
+          <input type="file" id="image" class="form-control" (change)="handleImageUpload($event)" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-2" [disabled]="!formdata.valid">Add Product</button>
+        @if(datasent)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Product</strong> Added Successfully
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+}
+      </form>
+    </div>
+  </div>
+</div>   

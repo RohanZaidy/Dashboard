@@ -1,0 +1,14 @@
+
+
+<div class="container mt-4">
+  <div class="row g-3">
+    <div class="col-md-4" *ngFor="let product of productList; trackBy: trackByName">
+      <div class="p-3 border rounded product-item text-center style">
+        <img [src]="product.image" alt="{{product.name}}" class="product-img mb-2">
+        <h6 class="fw-bold">{{ product.name }}</h6>
+        <p class="text-muted mb-1 price">Price: {{ product.price }} r.s</p>
+      </div>
+    </div>
+  </div>
+</div> 
+

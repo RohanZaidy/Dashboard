@@ -1,0 +1,44 @@
+
+.full-bg{
+    background-image: url('/homebg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1000px;
+    width: 100%;
+}
+
+.welcome {
+  position: fixed;
+  top: 250px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  background: linear-gradient(135deg, #d6f103, #1bd7e1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, letter-spacing 0.3s ease;
+  opacity: 0;
+  animation: fadeInText 1.5s forwards;
+}
+
+.welcome:hover {
+  transform: scale(1.05);
+  letter-spacing: 2px;
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

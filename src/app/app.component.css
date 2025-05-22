@@ -1,0 +1,29 @@
+
+.sidebar{
+    width: 250px;
+    transition: transform 0.3s ease;
+    transform: translateX(-250px);
+    position: sticky;
+    top: 63px;
+    min-height: 100vh;
+    height: 1300px;
+}
+
+.sidebar.active{
+transform: translateX(0);
+}
+
+.content{
+    /* background-color: rgb(26, 73, 68); */
+    height: 100vh;
+    margin-left: -250px;
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar.active + .content{
+    margin-left: 0px;
+}
+
+.sidebar a:hover{
+   background-color: rgb(153, 153, 155);
+}
